@@ -1,0 +1,22 @@
+{
+  "name": "snail",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn run build:live",
+    "build": "tsc -p .",
+    "unittest": "mocha ./dist/tests/**/*.test.js",
+    "test": "yarn run build && yarn run unittest",
+    "build:live": "./node_modules/nodemon/bin/nodemon.js --exec ./node_modules/.bin/ts-node -- ./src/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.5",
+    "@types/mocha": "^2.2.39",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0",
+    "typescript": "^2.1.6",
+    "colors": "^1.1.2",
+    "ts-node": "^2.1.0"
+  }
+}
